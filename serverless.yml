@@ -1,0 +1,20 @@
+service: projectvictoria314
+plugins:
+  - serverless-dotenv-plugin
+
+frameworkVersion: ">=1.1.0 <=4.33.1"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  
+functions:
+  process:
+    handler: handler.contact
+    package:
+      patterns:
+        - '!*.env'
+    events:
+      - http:
+          path: contact
+          method: post
