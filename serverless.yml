@@ -1,4 +1,4 @@
-service: projectvictoria314
+service: serverless-openai-twillio
 plugins:
   - serverless-dotenv-plugin
 
